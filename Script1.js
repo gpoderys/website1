@@ -1,18 +1,21 @@
+const bdy = document.body
+const newDiv = document.createElement('div')
+newDiv.classList.add('megaDiv')
+newDiv.style.backgroundColor = 'pink'
+newDiv.style.borderColor = 'black'
+newDiv.style.height = '200px'
+bdy.appendChild(newDiv)
 
-let answer = +prompt('Enter your number')
-if (answer < 1 || answer > 100) {
-    alert('Enter valid number')
-} else if (answer === undefined || answer === NaN) {
-    alert('please enter a number')
-} else {
-    for (let i = 1; i <= answer; i++){
-        if (i%3 == 0 && i%5 == 0) {
-            console.log('fizzbuzz')
-        } else if (i%3 == 0) {
-            console.log('fizz')
-        } else if (i%5 == 0) {
-            console.log('buzz')
-        } else 
-            {console.log(i)}
-    }
-}
+const container = document.querySelector('.megaDiv');
+
+const content = document.createElement('p');
+
+content.textContent = "Hey I'm Here!";
+
+container.appendChild(content);
+
+const container2 = document.querySelector('.megaDiv');
+const content2 = document.createElement('h3');
+content2.textContent = "Hey I'm Here too!";
+content2.style.color = 'blue'
+container2.appendChild(content2);
